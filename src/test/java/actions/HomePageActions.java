@@ -14,28 +14,21 @@ public class HomePageActions {
         PageFactory.initElements(HelperClass.getDriver(),homePageLocators);
     }
 
-    //Action get title header page ketika "successfully login"
-    public String getTitleHeaderPage() {
-        return(homePageLocators.headerPageTitle.getText());
-    }
-
     public WebElement getDashboard() {
         return(homePageLocators.Dashboard);
     }
-
-    public WebElement getProfileButton() {
-        return(homePageLocators.profileButton);
-    }
-
-    public WebElement getLogoutButton() {
-        return(homePageLocators.logoutButton);
-    }
-
 
     //Action get title header page ketika "successfully login"
     public String getTittlePage() {
         return(homePageLocators.homePageTitle.getText());
     }
 
+    public void hamburgerClick() {
+        homePageLocators.hamburgerMenu.click();
+    }
+
+    public void logoutClick(){
+        homePageLocators.logoutMenu.click();
+    }
 
 }

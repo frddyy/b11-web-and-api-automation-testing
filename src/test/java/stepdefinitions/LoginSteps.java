@@ -52,9 +52,6 @@ public class LoginSteps {
 	@Then("User should be logged in successfully")
 	public void user_should_be_able_to_login_successfully_and_new_page_open() {
 		Assert.assertTrue(objHomePage.getDashboard().isDisplayed());
-		objHomePage.getProfileButton().click();
-		objHomePage.getLogoutButton().click();
-
 	}
 
 	@Then("User should see an error message {string}")
@@ -63,6 +60,36 @@ public class LoginSteps {
 		Assert.assertEquals(errorMessage, objLogin.getErrorMessage());
 	}
 
+	@Given("User was on dashboard page")
+	public void user_was_on_dashboard_page() {
+		user_is_on_swag_lab_login_page();
+		user_enters_username_as_and_password_as("standard_user", "secret_sauce");
+		user_should_be_able_to_login_successfully_and_new_page_open();
+	}
+	@When("User click hamburger menu")
+	public void user_click_hamburger_menu() {
+		try {
+			objHomePage.hamburgerClick();
+			Thread.sleep(3000);  // Menambahkan waktu tunggu 3 detik
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 
+	@When("User Click Logout")
+	public void user_click_logout() {
+		try {
+			objHomePage.logoutClick();
+			Thread.sleep(2000);  // Menambahkan waktu tunggu 2 detik
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 
+	@Then("User navigate to login page")
+	public void user_navigate_to_login_page() throws InterruptedException {
+		String currentUrl = HelperClass.getCurrentUrl();
+		Assert.assertEquals(url, currentUrl);
+		Thread.sleep(2000);
+	}
 }
