@@ -17,12 +17,7 @@ public class HomePageActions {
     public WebElement getDashboard() {
         return(homePageLocators.Dashboard);
     }
-
-    //Action get title header page ketika "successfully login"
-    public String getTittlePage() {
-        return(homePageLocators.homePageTitle.getText());
-    }
-
+    
     public void hamburgerClick() {
         homePageLocators.hamburgerMenu.click();
     }
@@ -30,5 +25,4 @@ public class HomePageActions {
     public void logoutClick(){
         homePageLocators.logoutMenu.click();
     }
-
 }

@@ -7,9 +7,7 @@
     <list default="true" id="89faa677-9f50-4664-9a1e-557870d244ec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/actions/HomePageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/actions/HomePageActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/locators/HomePageLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/locators/HomePageLocators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/LoginPage.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/LoginPage.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/locators/LoginPageLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/locators/LoginPageLocators.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

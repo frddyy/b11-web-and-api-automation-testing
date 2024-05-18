@@ -23,7 +23,4 @@ public class LoginPageLocators {
 
     @FindBy(xpath = "(//*[contains(@class, 'svg-inline--fa fa-times-circle fa-w-16 error_icon')])[2]")
     public WebElement xIconPassword;
-
-
-
 }
