@@ -99,19 +99,6 @@ cd b11-web-automation-testing
 3. Jalankan perintah `mvn test` untuk menjalankan pengujian.
 4. Setelah pengujian selesai, laporan pengujian akan di-generate. Untuk mengakses laporan pengujian dalam format HTML, buka file berikut menggunakan browser web (Jika menggunakan VSCode bisa memanfaatkan fitur "Open with Live Server"): `target/HtmlReports/report.html`
 
-## Fitur Software Under Test
-
-Proyek ini menguji API DummyAPI dengan menggunakan beberapa fitur utama, diantaranya:
-
-| Fitur          | Deskripsi                                               | Cara Request                                        |
-| -------------- | ------------------------------------------------------- | --------------------------------------------------- |
-| Get User by ID | Mendapatkan informasi pengguna berdasarkan ID pengguna. | `GET /user/:id`                                     |
-| Create User    | Membuat pengguna baru.                                  | `POST /user/create` dengan body data pengguna baru. |
-| Update User    | Memperbarui informasi pengguna yang ada.                | `PUT /user/:id` dengan body data yang diperbarui.   |
-| Delete User    | Menghapus pengguna dari sistem.                         | `DELETE /user/:id`                                  |
-
-Dokumentasi lengkap untuk API DummyAPI dapat ditemukan di [sini](https://dummyapi.io/docs/user).
-
 # Test Cases
 
 | No. | Fitur Pengujian | Test Case                                                                                     | Tujuan Pengujian                                                                                                            |
