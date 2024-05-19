@@ -25,9 +25,6 @@ Program ini merupakan program untuk melakukan functional testing dalam Fitur Log
 - **Selenium** : Versi 4.20.0
 - **SLF4J (Simple Logging Facade for Jva)** : Versi 2.0.7
 
-### :dart: Tujuan
-Tujuan utama dari proyek ini adalah untuk memenuhi tugas mata kuliah Pengujian Perangkat Lunak Praktikum mengenai Pemahaman Automation Testing Web Application dengan Cucumber dan Selenium
-
 ### :mag_right: Test Case
 | Test Case ID | Module (Feature)   | Case (-/+/edge) | Test Case Name (Scenario) | Precondition (GIVEN) | Steps to execute (WHEN) | Test Data | Expected Result (THEN) | As Expected | Result (PASS/FAIL) | Remark |
 |--------------|--------------------|-----------------|---------------------------|-----------------------|-------------------------|-----------|------------------------|-------------|--------------------|--------|
@@ -45,10 +42,10 @@ Tujuan utama dari proyek ini adalah untuk memenuhi tugas mata kuliah Pengujian P
 ## :gear: Tools
 Proyek ini menggunakan beberapa teknologi utama:
 
-### Java 11
-[![Java](https://img.shields.io/badge/Java-11-blue?logo=java)](https://www.oracle.com/java/)
+### Java 17
+[![Java](https://img.shields.io/badge/Java-17-blue?logo=java)](https://www.oracle.com/java/)
 
-Bahasa pemrograman Java versi 11 digunakan dalam proyek ini untuk mengembangkan skrip otomatisasi.
+Bahasa pemrograman Java versi 17 digunakan dalam proyek ini untuk mengembangkan skrip otomatisasi.
 
 ### JUnit 4
 [![JUnit](https://img.shields.io/badge/JUnit-4-green?logo=junit)](https://junit.org/junit4/)
@@ -158,7 +155,7 @@ Berikut adalah langkah-langkah detail untuk menginstal dan menjalankan proyek in
 
 1. **Buat File Cucumber**
    - Buat file fitur Cucumber pada direktori `src\test\resources`.
-   - Contoh: `LoginPage.feature` dan `LogoutPage.feature`.
+   - Contoh: `LoginPage.feature`.
 
 2. **Buat Class Locator**
    - Buat class locator dari elemen pada halaman yang akan diuji dan simpan di direktori `src\test\java\locators`.
