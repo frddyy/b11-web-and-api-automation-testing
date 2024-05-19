@@ -252,17 +252,3 @@ cd b11-web-automation-testing
 2. Untuk menginstal proyek, jalankan perintah `mvn install`.
 3. Jalankan perintah `mvn test` untuk menjalankan pengujian.
 4. Setelah pengujian selesai, laporan pengujian akan di-generate. Untuk mengakses laporan pengujian dalam format HTML, buka file berikut menggunakan browser web (Jika menggunakan VSCode bisa memanfaatkan fitur "Open with Live Server"): `target/HtmlReports/report.html`
-
-## Test Cases
-
-| No. | Fitur Pengujian | Test Case                                                                                     | Tujuan Pengujian                                                                                                            |
-| --- | --------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| 1   | Login           | - TC0.0.1 Login berhasil dengan akun yang valid (PASS)                                        | Memastikan bahwa pengguna dapat melakukan Login dengan akun yang valid dan sudah terdaftar                                  |
-|     |                 | - TC0.0.2 Login gagal disebabkan uusername tidak diisi (FAILED)                               | Memastikan bahwa pengguna tidak dapat melakukan Login apabila tiadk mengisikan field Username                               |
-|     |                 | - TC0.0.3 Login gagal disebabkan password tidak diisi (FAILED)                                | Memastikan bahwa pengguna tidak dapat melakukan login apabila tidak mengisikan field Password                               |
-|     |                 | - TC0.0.4 Login gagal disebabkan username tidak terdaftar (FAILED)                            | Memastikan bahwa pengguna tidak dapat melakukan login apabila memasukkan username yang tidak terdaftar                      |
-|     |                 | - TC0.0.5 Login gagal disebabkan password tidak cocok dengan username yang terdaftar (FAILED) | Memastikan bahwa pengguna tidak dapat melakukan login dengan password yang salah atau tidak cocok dengan username yang ada. |
-|     |                 | - TC0.0.6 Login gagal disebabkan username dan password tidak diisi (PASS)                     | Mem
-
-astikan bahwa pengguna tidak dapat melakukan login apabila tidak mengisikan informasi pada field username dan password.  |
-| 2   | Logout          | - TC0.1.1 Navigasi Fitur Menu Logout                                                          | Memastikan bahwa pengguna berhasil melakukan logout dan diarahkan menuju halaman login kembali                              |
