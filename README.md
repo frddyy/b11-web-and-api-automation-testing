@@ -25,35 +25,6 @@ Program ini merupakan program untuk melakukan functional testing dalam Fitur Log
 - **Selenium** : Versi 4.20.0
 - **SLF4J (Simple Logging Facade for Jva)** : Versi 2.0.7
 
-## :ledger: Table Of Content
-- [Web Automation Testing](#web-automation-testing)
-  - [:ledger: Table Of Content](#ledger-table-of-content)
-  - [:beginner: About](#beginner-about)
-    - [👩‍💻 Author](#-author)
-    - [:dart: Tujuan](#dart-tujuan)
-    - [:mag_right: Test Case](#mag_right-test-case)
-  - [:gear: Tools](#gear-tools)
-    - [Java 11](#java-11)
-    - [JUnit 4](#junit-4)
-    - [Cucumber](#cucumber)
-    - [Selenium](#selenium)
-    - [WebDriver Chrome](#webdriver-chrome)
-  - [:electric_plug: Installation](#electric_plug-installation)
-    - [Prasyarat](#prasyarat)
-    - [Panduan Instalasi Langkah-demi-Langkah](#panduan-instalasi-langkah-demi-langkah)
-      - [Untuk Windows:](#untuk-windows)
-  - [:wrench: Development](#wrench-development)
-    - [:file_folder: Project Structure](#file_folder-file-structure)
-    - [:file_folder: Menambahkan Test Script](#file_folder-menambahkan-test-script)
-
-##  :beginner: About
-Proyek ini merupakan pengujian fungsionalitas Login dan Logout pada website [SauceDemo](https://www.saucedemo.com/). Pengujian dilakukan secara otomatis menggunakan Selenium untuk mengotomatisasi interaksi dengan browser, Cucumber untuk penulisan skenario pengujian dalam bahasa Gherkin, JUnit untuk menjalankan dan mengelola unit test, dan Maven sebagai build tools proyek dan pengelolaan dependency. Proyek ini dibuat menggunakan bahasa pemrograman Java.
-
-### 👩‍💻 Author
-- Aini Diah Rahmawati [211524033]
-- Ghessa Theniana - [211524042]
-- Mochamad Ferdy Fauzan - [211524049]
-
 ### :dart: Tujuan
 Tujuan utama dari proyek ini adalah untuk memenuhi tugas mata kuliah Pengujian Perangkat Lunak Praktikum mengenai Pemahaman Automation Testing Web Application dengan Cucumber dan Selenium
 
@@ -252,3 +223,8 @@ cd b11-web-automation-testing
 2. Untuk menginstal proyek, jalankan perintah `mvn install`.
 3. Jalankan perintah `mvn test` untuk menjalankan pengujian.
 4. Setelah pengujian selesai, laporan pengujian akan di-generate. Untuk mengakses laporan pengujian dalam format HTML, buka file berikut menggunakan browser web (Jika menggunakan VSCode bisa memanfaatkan fitur "Open with Live Server"): `target/HtmlReports/report.html`
+
+## 👩‍💻 Author
+- Aini Diah Rahmawati [211524033]
+- Ghessa Theniana - [211524042]
+- Mochamad Ferdy Fauzan - [211524049]
