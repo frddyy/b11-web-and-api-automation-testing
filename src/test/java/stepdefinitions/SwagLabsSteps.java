@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import actions.CartPageActions;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 
@@ -7,10 +8,11 @@ import actions.LoginPageActions;
 import utils.HelperClass;
 import actions.HomePageActions;
 
-public class LoginSteps {
+public class SwagLabsSteps {
 	
 	LoginPageActions objLogin = new LoginPageActions();
 	HomePageActions objHomePage = new HomePageActions();
+	CartPageActions objCartPage = new CartPageActions();
 
 	String url = "https://www.saucedemo.com/";
 	@Given("User is on Swag Labs Login page")
@@ -92,4 +94,45 @@ public class LoginSteps {
 		Assert.assertEquals(url, currentUrl);
 		Thread.sleep(2000);
 	}
+
+	@When("User clicks ADD cart button")
+	public void user_clicks_add_cart_button() {
+		try {
+			objCartPage.addToCartButtonClick();
+			Thread.sleep(3000);  // Menambahkan waktu tunggu 3 detik
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@When("User clicks the Cart button")
+	public void user_clicks_the_cart_button() {
+		try {
+			objCartPage.cartButtonClick();
+			Thread.sleep(3000);  // Menambahkan waktu tunggu 3 detik
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Then("User navigate to cart page")
+	public void user_navigate_to_cart_page() throws InterruptedException {
+		Assert.assertTrue(objCartPage.getCartPage().isDisplayed());
+	}
+
+	@When("User clicks the Checkout Button")
+	public void user_clicks_the_checkout_button() {
+		try {
+			objCartPage.checkoutButtonClick();
+			Thread.sleep(3000);  // Menambahkan waktu tunggu 3 detik
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Then("User navigate to Checkout Information page")
+	public void user_navigate_to_checkout_information_page() throws InterruptedException {
+		Assert.assertTrue(objCartPage.getCheckoutPage().isDisplayed());
+	}
+
 }

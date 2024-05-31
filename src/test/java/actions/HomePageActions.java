@@ -1,6 +1,5 @@
 package actions;
 
-
 import locators.HomePageLocators;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -17,7 +16,7 @@ public class HomePageActions {
     public WebElement getDashboard() {
         return(homePageLocators.Dashboard);
     }
-    
+
     public void hamburgerClick() {
         homePageLocators.hamburgerMenu.click();
     }

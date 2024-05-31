@@ -7,7 +7,8 @@
     <list default="true" id="89faa677-9f50-4664-9a1e-557870d244ec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/actions/HomePageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/actions/HomePageActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/locators/LoginPageLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/locators/LoginPageLocators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/actions/LoginPageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/actions/LoginPageActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/SwagLabsSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +17,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,18 +51,19 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Kuliah/Semester 6 (SIZE BESAR)/PPL/B11_WebAutomationProject&quot;
+    &quot;last_opened_file_path&quot;: &quot;E:/Kuliah/Semester 6 (SIZE BESAR)/PPL/B11_WebAutomationProject&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
   }
 }</component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: User Logout">
-    <configuration name="Feature: LoginPage (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Feature: CartPage">
+    <configuration name="Feature: CartPage" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/LoginPage.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/CartPage.feature" />
       <option name="GLUE" value="stepdefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="B11_WebAutomationTesting" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: LoginPage" />
+      <option name="SUGGESTED_NAME" value="Feature: CartPage" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -66,14 +75,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: LoginPage" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Checkout with One Item" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/LoginPage.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/CartPage.feature" />
       <option name="GLUE" value="stepdefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="webtestingautomation" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: LoginPage" />
+      <module name="B11_WebAutomationTesting" />
+      <option name="NAME_FILTER" value="^Checkout with One Item$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Checkout with One Item$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Checkout with One Item" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -105,27 +115,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CucumberRunnerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verifying Cart Page with Items" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/CartPage.feature" />
+      <option name="GLUE" value="stepdefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="B11_WebAutomationTesting" />
+      <option name="NAME_FILTER" value="^Verifying Cart Page with Items$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verifying Cart Page with Items$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verifying Cart Page with Items" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="runner.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="runner" />
-      <option name="MAIN_CLASS_NAME" value="runner.CucumberRunnerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Verifying Cart Page with No Items" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/CartPage.feature" />
+      <option name="GLUE" value="stepdefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="B11_WebAutomationTesting" />
+      <option name="NAME_FILTER" value="^Verifying Cart Page with No Items$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verifying Cart Page with No Items$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verifying Cart Page with No Items" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: CartPage" />
+        <item itemvalue="Cucumber Java.Scenario: Verifying Cart Page with No Items" />
+        <item itemvalue="Cucumber Java.Scenario: Verifying Cart Page with Items" />
+        <item itemvalue="Cucumber Java.Scenario: Checkout with One Item" />
         <item itemvalue="Cucumber Java.Scenario: User Logout" />
-        <item itemvalue="JUnit.CucumberRunnerTest" />
-        <item itemvalue="Cucumber Java.Feature: LoginPage (1)" />
-        <item itemvalue="Cucumber Java.Feature: LoginPage" />
       </list>
     </recent_temporary>
   </component>
