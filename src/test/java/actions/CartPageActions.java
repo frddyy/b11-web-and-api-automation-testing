@@ -21,8 +21,12 @@ public class CartPageActions {
         return(cartPageLocators.CartPage);
     }
 
-    public void addToCartButtonClick() {
-        cartPageLocators.addToCartButton.click();
+    public void addToCartButtonClickBackpack() {
+        cartPageLocators.addToCartButtonBackpack.click();
+    }
+
+    public void addToCartButtonClickJacket() {
+        cartPageLocators.addToCartButtonJacket.click();
     }
 
     public void checkoutButtonClick() {

@@ -14,7 +14,10 @@ public class CartPageLocators {
     public WebElement CartPage;
 
     @FindBy(xpath = "//*[@id=\"add-to-cart-sauce-labs-backpack\"]")
-    public WebElement addToCartButton;
+    public WebElement addToCartButtonBackpack;
+
+    @FindBy(xpath = "//*[@id=\"add-to-cart-sauce-labs-fleece-jacket\"]")
+    public WebElement addToCartButtonJacket;
 
     @FindBy(xpath = "//*[@id=\"checkout\"]")
     public WebElement checkoutButton;

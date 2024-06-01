@@ -28,7 +28,6 @@ public class SwagLabsSteps {
 		Thread.sleep(2000);
 	}
 
-
 	@Then("There are fields for inputting username and password")
 	public void there_are_fields_for_inputting_username_and_password() {
 		Assert.assertTrue(objLogin.isPasswordFieldDisplayed());
@@ -68,6 +67,7 @@ public class SwagLabsSteps {
 		user_enters_username_as_and_password_as("standard_user", "secret_sauce");
 		user_should_be_able_to_login_successfully_and_new_page_open();
 	}
+
 	@When("User click hamburger menu")
 	public void user_click_hamburger_menu() {
 		try {
@@ -95,11 +95,22 @@ public class SwagLabsSteps {
 		Thread.sleep(2000);
 	}
 
-	@When("User clicks ADD cart button")
-	public void user_clicks_add_cart_button() {
+	// Fitur Cart
+	@When("User clicks ADD cart button Sauce Labs Backpack")
+	public void user_clicks_add_cart_button_sauce_labs_backpack() {
 		try {
-			objCartPage.addToCartButtonClick();
-			Thread.sleep(3000);  // Menambahkan waktu tunggu 3 detik
+			objCartPage.addToCartButtonClickBackpack();
+			Thread.sleep(2000);  // Menambahkan waktu tunggu 2 detik
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@When("User clicks ADD cart button Sauce Labs Fleece Jacket")
+	public void user_clicks_add_cart_button_sauce_labs_fleece_jacket() {
+		try {
+			objCartPage.addToCartButtonClickJacket();
+			Thread.sleep(2000);  // Menambahkan waktu tunggu 2 detik
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -109,7 +120,7 @@ public class SwagLabsSteps {
 	public void user_clicks_the_cart_button() {
 		try {
 			objCartPage.cartButtonClick();
-			Thread.sleep(3000);  // Menambahkan waktu tunggu 3 detik
+			Thread.sleep(2000);  // Menambahkan waktu tunggu 2 detik
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -124,7 +135,7 @@ public class SwagLabsSteps {
 	public void user_clicks_the_checkout_button() {
 		try {
 			objCartPage.checkoutButtonClick();
-			Thread.sleep(3000);  // Menambahkan waktu tunggu 3 detik
+			Thread.sleep(2000);  // Menambahkan waktu tunggu 2 detik
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -134,5 +145,15 @@ public class SwagLabsSteps {
 	public void user_navigate_to_checkout_information_page() throws InterruptedException {
 		Assert.assertTrue(objCartPage.getCheckoutPage().isDisplayed());
 	}
+
+	// End to End Testing
+	@Given("User Successfully Login")
+	public void user__on_swag_lab_login_page() {
+		user_is_on_swag_lab_login_page();
+		user_enters_username_as_and_password_as("standard_user", "secret_sauce");
+		user_should_be_able_to_login_successfully_and_new_page_open();
+	}
+
+
 
 }

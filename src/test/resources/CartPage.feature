@@ -5,7 +5,8 @@ Feature: Cart functionality in Swag Labs
 
   @CartAvailableProduct @TC01
   Scenario: Verifying Cart Page with Items
-    When User clicks ADD cart button
+    When User clicks ADD cart button Sauce Labs Backpack
+    And User clicks ADD cart button Sauce Labs Fleece Jacket
     And User clicks the Cart button
     Then User navigate to cart page
 
@@ -16,7 +17,7 @@ Feature: Cart functionality in Swag Labs
 
   @CheckoutOneItem @TC05
   Scenario: Checkout with One Item
-    When User clicks ADD cart button
+    When User clicks ADD cart button Sauce Labs Backpack
     And User clicks the Cart button
     Then User navigate to cart page
     When User clicks the Checkout Button
