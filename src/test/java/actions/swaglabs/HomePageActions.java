@@ -18,6 +18,34 @@ public class HomePageActions {
         return(homePageLocators.Dashboard);
     }
 
+    public String getItemName() {
+        return (homePageLocators.itemName.getText());
+    }
+
+    public String getItemImageUrl() {
+        return homePageLocators.itemImage.getAttribute("src");
+    }
+
+    public String getItemPrice() {
+        return (homePageLocators.itemPrice.getText());
+    }
+
+    public WebElement getCatalog() {
+        return(homePageLocators.Catalog);
+    }
+
+    public void addToCartButtonProduct() {
+        homePageLocators.addToCartButtonProduct.click();
+    }
+
+    public WebElement getCart() {
+        return(homePageLocators.CartIcon);
+    }
+
+    public void removeButton() {
+        homePageLocators.removeButton.click();
+    }
+
     public void hamburgerClick() {
         homePageLocators.hamburgerMenu.click();
     }
