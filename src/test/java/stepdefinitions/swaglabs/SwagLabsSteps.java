@@ -111,48 +111,32 @@ public class SwagLabsSteps {
 
 	// Fitur Cart
 	@When("User clicks ADD cart button Sauce Labs Backpack")
-	public void user_clicks_add_cart_button_sauce_labs_backpack() {
-		try {
-			objCartPage.addToCartButtonClickBackpack();
-			Thread.sleep(2000);  // Menambahkan waktu tunggu 2 detik
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+	public void user_clicks_add_cart_button_sauce_labs_backpack()throws InterruptedException {
+		objCartPage.addToCartButtonClickBackpack();
+		Thread.sleep(2000);
 	}
 
 	@When("User clicks ADD cart button Sauce Labs Fleece Jacket")
-	public void user_clicks_add_cart_button_sauce_labs_fleece_jacket() {
-		try {
-			objCartPage.addToCartButtonClickJacket();
-			Thread.sleep(2000);  // Menambahkan waktu tunggu 2 detik
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+	public void user_clicks_add_cart_button_sauce_labs_fleece_jacket() throws InterruptedException {
+		objCartPage.addToCartButtonClickJacket();
+		Thread.sleep(2000);
 	}
 
 	@When("User clicks the Cart button")
-	public void user_clicks_the_cart_button() {
-		try {
-			objCartPage.cartButtonClick();
+	public void user_clicks_the_cart_button() throws InterruptedException {
 			Thread.sleep(2000);  // Menambahkan waktu tunggu 2 detik
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
 	}
 
 	@Then("User navigate to cart page")
-	public void user_navigate_to_cart_page() throws InterruptedException {
+	public void user_navigate_to_cart_page()throws InterruptedException {
 		Assert.assertTrue(objCartPage.getCartPage().isDisplayed());
+		Thread.sleep(2000);
 	}
 
 	@When("User clicks the Checkout Button")
-	public void user_clicks_the_checkout_button() {
-		try {
+	public void user_clicks_the_checkout_button() throws InterruptedException {
 			objCartPage.checkoutButtonClick();
 			Thread.sleep(2000);  // Menambahkan waktu tunggu 2 detik
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
 	}
 
 	@Then("User navigate to Checkout Information page")
@@ -291,7 +275,7 @@ public class SwagLabsSteps {
     public void the_system_should_display_the_previous_current_page() {
         Assert.assertTrue(objHomePage.getDashboard().isDisplayed());
     }
-	
+
 
 	// End to End Testing
 	@Given("User Successfully Login")

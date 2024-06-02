@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="89faa677-9f50-4664-9a1e-557870d244ec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/actions/CartPageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/actions/CartPageActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/locators/CartPageLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/locators/CartPageLocators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/SwagLabsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/SwagLabsSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/CartPage.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/CartPage.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/actions/swaglabs/CartPageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/actions/swaglabs/CartPageActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/swaglabs/SwagLabsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/swaglabs/SwagLabsSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,14 +46,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Kuliah/Semester 6 (SIZE BESAR)/PPL/B11_WebAutomationProject&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "E:/Kuliah/Semester 6 (SIZE BESAR)/PPL/b11-web-and-api-automation-testing",
+    "settings.editor.selected.configurable": "preferences.editor"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Cucumber Java.Scenario: Checkout with One Item">
     <configuration name="Feature: CartPage" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
