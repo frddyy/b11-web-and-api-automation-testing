@@ -2,13 +2,9 @@ package stepdefinitions.swaglabs;
 
 import java.util.List;
 
+import actions.swaglabs.*;
 import org.junit.Assert;
 
-import actions.swaglabs.CartPageActions;
-import actions.swaglabs.HomePageActions;
-import actions.swaglabs.LoginPageActions;
-import actions.swaglabs.ProductDetailsPageActions;
-import actions.swaglabs.MenuPageActions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -21,6 +17,8 @@ public class SwagLabsSteps {
 	CartPageActions objCartPage = new CartPageActions();
 	ProductDetailsPageActions objProductDetailsPage = new ProductDetailsPageActions();
 	MenuPageActions objMenuPageActions = new MenuPageActions();
+
+	CheckoutInfoPageActions objCheckoutInfoPage = new CheckoutInfoPageActions();
 
 	String url = "https://www.saucedemo.com/";
 	String catalogDescription, detailsName, detailsDescription, detailsPrice;
@@ -124,6 +122,7 @@ public class SwagLabsSteps {
 
 	@When("User clicks the Cart button")
 	public void user_clicks_the_cart_button() throws InterruptedException {
+			objCartPage.cartButtonClick();
 			Thread.sleep(2000);  // Menambahkan waktu tunggu 2 detik
 	}
 
@@ -190,7 +189,7 @@ public class SwagLabsSteps {
 	}
 
 	@Then("The product should be added to the cart")
-	public void the_product_should_be_added_to_the_cart() {
+	public void the_product_should_be_added_to_the_cart() throws InterruptedException {
 		user_clicks_the_cart_button();
         Assert.assertTrue(objProductDetailsPage.isProductInCart(detailsName, detailsDescription, detailsPrice));
     }
@@ -269,13 +268,37 @@ public class SwagLabsSteps {
 		Assert.assertFalse(objMenuPageActions.isMenuSidebarDisplayed());
 	}
 
-
-
     @Then("The system should display the previous current page")
     public void the_system_should_display_the_previous_current_page() {
         Assert.assertTrue(objHomePage.getDashboard().isDisplayed());
     }
 
+	//Checkout
+	@Given("User has added item to cart")
+	public void user_has_added_item_to_cart() throws InterruptedException {
+		user_was_on_dashboard_page();
+		user_clicks_add_cart_button_sauce_labs_backpack();
+	}
+	@Given("User has clicked on cart button and navigated to cart page")
+	public void user_has_clicked_on_cart_button_and_navigated_to_cart_page() throws InterruptedException {
+		user_clicks_the_cart_button();
+		user_navigate_to_cart_page();
+	}
+	@Then("There is checkout information title")
+	public void there_is_checkout_information_title() {
+		Assert.assertEquals(objCheckoutInfoPage.getTitlePage(),"Checkout: Your Information");
+	}
+	@Then("There is checkout info field")
+	public void there_is_checkout_info_field() throws InterruptedException {
+		Assert.assertTrue(objCheckoutInfoPage.getCheckoutInfoField());
+		Thread.sleep(2000);
+	}
+
+	@When("User enters field with valid data")
+	public void user_enters_field_with_valid_data() throws InterruptedException {
+		objCheckoutInfoPage.fillsInCheckoutInfoField("Lebron", "James", "40121" );
+		Thread.sleep(2000);
+	}
 
 	// End to End Testing
 	@Given("User Successfully Login")
