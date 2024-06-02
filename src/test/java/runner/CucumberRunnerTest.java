@@ -6,8 +6,8 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags = "",
-                 features = "src/test/resources/swaglabs/DashboardPage.feature",
+@CucumberOptions(tags = "", 
+                 features = "src/test/resources", 
                  glue = {"stepdefinitions"},
                  monochrome = true,
                  plugin = {"html:target/HtmlReports/report.html",
