@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags = "", 
+@CucumberOptions(tags = "",
                  features = "src/test/resources/swaglabs/DashboardPage.feature",
                  glue = {"stepdefinitions"},
                  monochrome = true,

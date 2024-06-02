@@ -1,76 +1,31 @@
-Feature: Create User API Tests
+Feature: Create User API
 
-  Background:
-    Given API environment DUMMYAPI set up
+  @F0.0.1
+  Scenario: Create User with a header app-id that is not registered in the system
+    Given API environment DUMMYAPI is set up for CreateUser and user is unauthenticated
+    When user sends a POST request with an unregistered app-id
+    Then response indicates app-id does not exist with a 403 Forbidden status; no database change
+  
+  @F0.0.2
+  Scenario: Create User with a header app-id in an incorrect format
+    Given API environment DUMMYAPI is set up for CreateUser and user is unauthenticated
+    When user sends a POST request with a malformed app-id
+    Then response indicates app-id does not exist with a 403 Forbidden status; no database change
+  
+  @F0.0.3
+  Scenario: Create User without entering the header app-id
+    Given API environment DUMMYAPI is set up for CreateUser and user is unauthenticated
+    When user sends a POST request with no app-id and a valid data user
+    Then response indicates missing app-id with a 403 Forbidden status; no database change
 
-  @F02TC0.0.1
-  Scenario: Create user with a header app-id that is not registered in the system
-    Given User is unauthenticated
-    When User sends a POST request with an unregistered app-id
-    """
-    {
-        "title": "mr",
-        "firstName": "dafa",
-        "lastName": "ahmad",
-        "gender": "male",
-        "email": "dafaahmad@gmail.com",
-        "dateOfBirth": "1900-02-02",
-        "phone": "0852145899",
-        "picture": "https://example.com/dafaahmad.jpg",
-        "location": {
-            "street": "892, Grande Rue",
-            "city": "Besançon",
-            "state": "Seine-et-Marne",
-            "country": "France",
-            "timezone": "+09:00"
-        }
-    }
-    """
-    Then Response indicates app-id does not exist with a 403 Forbidden status
-    And No database change
+  @F0.0.4
+  Scenario: Create user with all fields filled with valid data types
+    Given API environment DUMMYAPI is set up for CreateUser and user is authenticated with permission to access API
+    When user sends a POST request with a valid data user
+    Then response body shows JSON data of the user, 200 OK status; database change
 
-  @F02TC0.0.4
-  Scenario: Create user with valid data
-    Given the user is authenticated with permission to access API
-    When I send a POST request to "/user/create" with the following JSON payload
-    """
-    {
-        "title": "mr",
-        "firstName": "dafa",
-        "lastName": "ahmad",
-        "gender": "male",
-        "email": "dafaahmad@gmail.com",
-        "dateOfBirth": "1900-02-02",
-        "phone": "0852145899",
-        "picture": "https://example.com/dafaahmad.jpg",
-        "location": {
-            "street": "892, Grande Rue",
-            "city": "Besançon",
-            "state": "Seine-et-Marne",
-            "country": "France",
-            "timezone": "+09:00"
-        }
-    }
-    """
-    Then the response status code should be 200
-    And the response JSON should match the following
-    """
-    {
-        "title": "mr",
-        "firstName": "dafa",
-        "lastName": "ahmad",
-        "gender": "male",
-        "email": "dafaahmad@gmail.com",
-        "dateOfBirth": "1900-02-02",
-        "phone": "0852145899",
-        "picture": "https://example.com/dafaahmad.jpg",
-        "location": {
-            "street": "892, Grande Rue",
-            "city": "Besançon",
-            "state": "Seine-et-Marne",
-            "country": "France",
-            "timezone": "+09:00"
-        }
-    }
-    """
-    And the database should reflect the new user data
+  @F0.0.5
+  Scenario: Create user with the firstName already registered, but lastName and email not registered
+    Given API environment DUMMYAPI is set up for CreateUser and user is authenticated with permission to access API
+    When user sends a POST request with a valid data user
+    Then response body shows JSON data of the user, 200 OK status; database change
