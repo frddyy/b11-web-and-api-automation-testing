@@ -1,165 +1,129 @@
-# Web Automation Testing With Selenium & Cucumber
+# Web Automation and API Testing with Selenium, Cucumber, and Rest-Assured
 
 ## Description
 
-Program ini merupakan program untuk melakukan functional testing dalam Fitur Login dan Logout pada halaman website [SauceDemoSwagLabs](https://www.saucedemo.com/) secara otomatis dengan menggunakan Selenium untuk mengatur interaksi secara otomatis dengan halaman browser & Cucumber sebagai framework penulisan skenario pengujian dalam syntax Gherkin.
+This project performs functional testing of various features on the SauceDemo Swag Labs website and also tests the user controller API program on the DummyAPI website. The project uses Selenium to automate interactions with the browser and Cucumber to write test scenarios in Gherkin syntax. For API testing, it utilizes Rest-Assured.
 
 ## Technologies & Tools
 
-- **Repository Management** : Git
-- **IDE** : Visual Studio Code
-- **CLI** : Command Prompt (CMD) / Powershell (Windows)
-- **Build Tools** : [![Maven](https://img.shields.io/badge/Maven-3.8.3-blue)](https://maven.apache.org/)
-  Kami menggunakan Apache Maven untuk mengelola proyek Java kami secara lebih efisien.
-  Versi Maven yang kami gunakan adalah 3.8.3.
-  Untuk informasi lebih lanjut -> [Kunjungi situs Maven](https://maven.apache.org/).
-- **Programming Language** : [![Java](https://img.shields.io/badge/Java-17.0.10%202024--01--16%20LTS-red)](https://www.java.com/)
-  Dalam pengembangan aplikasi ini, kami menggunakan bahasa pemrograman Java.
-  Kami memilih bahasa pemrograman ini karena memudahkan dari segi pengembangan dan fungsionalitas yang diharapkan. Banyaknya referensi yang dapat kami gunakan juga menjadi faktor untuk penentuan penggunaan bahasa pemrograman ini.
-  Versi java yang kami gunakan adalah Java 17.0.10 2024-01-16 LTS.
-  Untuk informasi lebih lanjut -> [Kunjungi situs Java](https://www.java.com/) untuk informasi lebih lanjut.
-- **Unit Testing** :
-- **Automation Testing Tools** : Cucumber Java & JUnit Versi 7.17.0
-- **WebDriverManager** : Versi 5.4.0
-- **GlueGen** : Versi 2.3.2
-- **Selenium** : Versi 4.20.0
-- **SLF4J (Simple Logging Facade for Jva)** : Versi 2.0.7
+- **Repository Management**: Git
+- **IDE**: Visual Studio Code
+- **CLI**: Command Prompt (CMD) / PowerShell (Windows)
+- **Build Tools**: [![Maven](https://img.shields.io/badge/Maven-3.8.3-blue)](https://maven.apache.org/)
+- **Programming Language**: [![Java](https://img.shields.io/badge/Java-17.0.10%202024--01--16%20LTS-red)](https://www.java.com/)
+- **Unit Testing**: JUnit 4
+- **Automation Testing Tools**: Cucumber Java & JUnit (Version 7.17.0)
+- **WebDriverManager**: Version 5.4.0
+- **GlueGen**: Version 2.3.2
+- **Selenium**: Version 4.20.0
+- **SLF4J (Simple Logging Facade for Java)**: Version 2.0.7
+- **Rest-Assured for API Testing**: Version 4.5.1
 
-### :mag_right: Test Case
-| Test Case ID | Module (Feature)   | Case (-/+/edge) | Test Case Name (Scenario) | Precondition (GIVEN) | Steps to execute (WHEN) | Test Data | Expected Result (THEN) | As Expected | Result (PASS/FAIL) | Remark |
-|--------------|--------------------|-----------------|---------------------------|-----------------------|-------------------------|-----------|------------------------|-------------|--------------------|--------|
-| 0.0          | Login Functionality |                 |                           |                       |                         |           |                        |             |                    |        |
-| 0.0.1        |                    | Positif         | Login berhasil dengan akun yang valid | - User sudah membuka halaman website Swag Labs - User sudah berada pada halaman login | 1. Masukkan username pada formulir 2. Masukkan password pada formulir 3. Klik tombol Login | username: standard_user password: secret_sauce | 1. Berhasil melakukan login 2. User diarahkan ke halaman dashboard |             |                    |        |
-| 0.0.2        |                    | Negatif         | Login gagal disebabkan username tidak diisi | - User sudah membuka halaman website Swag Labs - User sudah berada pada halaman login | 1. Masukkan password pada formulir 2. Klik tombol Login | username:  password: secret_sauce | 1. Gagal melakukan login 2. Menampilkan pesan "You need Username !" 3. User tetap berada pada halaman login |             |                    |        |
-| 0.0.3        |                    | Negatif         | Login gagal disebabkan password tidak diisi | - User sudah membuka halaman website Swag Labs - User sudah berada pada halaman login | 1. Masukkan username pada formulir 2. Klik tombol Login | username: standard_user password:  | 1. Gagal melakukan login 2. Menampilkan pesan "You need Password !" 3. User tetap berada pada halaman login |             |                    |        |
-| 0.0.4        |                    | Negatif         | Login gagal disebabkan username tidak terdaftar | - User sudah membuka halaman website Swag Labs - User sudah berada pada halaman login | 1. Masukkan username pada formulir 2. Masukkan password pada formulir 3. Klik tombol Login | username: super_user password: secret_sauce | 1. Gagal melakukan login 2. Menampilkan pesan "Username and password do not match any user in this service !" 3. User tetap berada pada halaman login |             |                    |        |
-| 0.0.5        |                    | Negatif         | Login gagal disebabkan password tidak cocok dengan username yang terdaftar | - User sudah membuka halaman website Swag Labs - User sudah berada pada halaman login | 1. Masukkan username pada formulir 2. Masukkan password pada formulir 3. Klik tombol Login | username: standard_user password: admin123 | 1. Gagal melakukan login 2. Menampilkan pesan "Username and password do not match any user in this service !" 3. User tetap berada pada halaman login |             |                    |        |
-| 0.0.6        |                    | Negatif         | Login gagal disebabkan username dan password tidak diisi | - User sudah membuka halaman website Swag Labs - User sudah berada pada halaman login | 1. Klik tombol Login | username:  password:  | 1. Gagal melakukan login 2. Menampilkan pesan "You need Username & Password !" 3. User tetap berada pada halaman login |             |                    |        |
-| 0.1          | Logout Functionality|                 |                           |                       |                         |           |                        |             |                    |        |
-| 0.1.1        |                    | Positif         | Navigasi Fitur Menu Logout | - User sudah membuka halaman website Swag Labs - User sudah melakukan login pada website Swag Labs | 1. Klik sidebar Menu 2. Klik button Logout | -         | 1. Pengguna diarahkan untuk keluar dari aplikasi 2. Aplikasi menampilkan halaman login |             |                    |        |
+## Installation
 
+### Prerequisites
 
-## :gear: Tools
-Proyek ini menggunakan beberapa teknologi utama:
-
-### Java 17
-[![Java](https://img.shields.io/badge/Java-17-blue?logo=java)](https://www.oracle.com/java/)
-
-Bahasa pemrograman Java versi 17 digunakan dalam proyek ini untuk mengembangkan skrip otomatisasi.
-
-### JUnit 4
-[![JUnit](https://img.shields.io/badge/JUnit-4-green?logo=junit)](https://junit.org/junit4/)
-
-JUnit 4 digunakan untuk menjalankan dan mengelola unit test dalam proyek ini.
-
-### Cucumber
-[![Cucumber](https://img.shields.io/badge/Cucumber-BDD-orange?logo=cucumber)](https://cucumber.io/)
-
-Cucumber digunakan untuk menulis skenario pengujian dalam bahasa Gherkin agar lebih mudah dipahami dan terstruktur.
-
-### Selenium
-[![Selenium](https://img.shields.io/badge/Selenium-Automation-blueviolet?logo=selenium)](https://www.selenium.dev/)
-
-Selenium digunakan untuk mengotomatisasi interaksi dengan browser web dalam pengujian otomatis.
-
-### WebDriver Chrome 
-[![Chrome Driver](https://img.shields.io/badge/Chrome%20Driver-Latest-yellow?logo=googlechrome)](https://chromedriver.chromium.org/)
-
-WebDriver Chrome versi 1.24 digunakan sebagai driver untuk mengontrol browser Google Chrome dalam pengujian.
-
-## :electric_plug: Installation
-Berikut adalah langkah-langkah detail untuk menginstal dan menjalankan proyek ini berdasarkan sistem operasi yang Anda gunakan.
-
-### Prasyarat
 1. **Java Development Kit (JDK)**
-   - Pastikan Anda memiliki JDK terinstal. Anda dapat mengunduhnya dari [situs resmi Oracle](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
-   
+   - Ensure you have JDK installed. You can download it from the [Oracle official site](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
+
 2. **Maven**
-   - Pastikan Anda memiliki Apache Maven terinstal. Anda dapat mengunduhnya dari [situs resmi Maven](https://maven.apache.org/download.cgi).
-   
+   - Ensure you have Apache Maven installed. You can download it from the [Maven official site](https://maven.apache.org/download.cgi).
+
 3. **Cucumber**
-   - Jika Anda menggunakan Eclipse, Anda perlu menginstal plugin Cucumber.
+   - If you are using Eclipse, you need to install the Cucumber plugin.
 
-### Panduan Instalasi Langkah-demi-Langkah
+### Step-by-Step Installation Guide
 
-#### Untuk Windows:
+#### For Windows:
 
 1. **Clone Repository**
-   - Buka Command Prompt dan navigasikan ke direktori tempat Anda ingin meng-clone repository.
-   - Jalankan perintah berikut:
+   - Open Command Prompt and navigate to the directory where you want to clone the repository.
+   - Run the following command:
      ```sh
-     git clone https://github.com/ainidr25/b11-web-automation-testing.git
+     git clone https://github.com/frddyy/b11-web-and-api-automation-testing.git
      ```
 
-2. **Install Plugin Cucumber di Eclipse**
-   - Buka Eclipse.
-   - Pergi ke `Help` > `Eclipse Marketplace`.
-   - Di kolom `Find`, ketik `Cucumber`.
-   - Klik `Go`, dan dari hasil pencarian, klik `Install` di sebelah `Cucumber Eclipse Plugin`.
-   - Ikuti petunjuk untuk menyelesaikan instalasi dan restart Eclipse jika diperlukan.
+2. **Install Cucumber Plugin in Eclipse**
+   - Open Eclipse.
+   - Go to `Help` > `Eclipse Marketplace`.
+   - In the `Find` field, type `Cucumber`.
+   - Click `Go`, and from the search results, click `Install` next to `Cucumber Eclipse Plugin`.
+   - Follow the instructions to complete the installation and restart Eclipse if necessary.
 
-3. **Navigasikan ke Direktori Proyek**
-   - Di Command Prompt, navigasikan ke direktori repository yang telah di-clone:
+3. **Navigate to Project Directory**
+   - In Command Prompt, navigate to the cloned repository directory:
      ```sh
-     cd b11-web-automation-testing
+     cd b11-web-and-api-automation-testing
      ```
 
-4. **Jalankan Proyek**
-   - Jalankan perintah berikut untuk menjalankan pengujian menggunakan Maven:
+4. **Run Project**
+   - Run the following command to execute tests using Maven:
      ```sh
      mvn test
      ```
 
-##  :wrench: Development
-
-### :file_folder: Project Structure
+## Project Structure
 
 ```
 ├── src/
 │   ├── driver/
-│   │   ├── chromedriver.exe
 │   ├── test/
 │   │   └── java/
 │   │       └── actions/
-│   │           ├── HomePageActions.java
-│   │           ├── loginPageActions.java
+│   │           └── swaglabs/
+│   │               ├── CartPageActions.java
+│   │               ├── CheckoutInfoPageActions.java
+│   │               ├── HomePageActions.java
+│   │               ├── LoginPageActions.java
+│   │               ├── MenuPageActions.java
+│   │               ├── ProductDetailsPageActions.java
 │   │       └── locators/
-│   │           ├── HomePageLocators.java
-│   │           ├── loginPageLocators.java
+│   │           └── swaglabs/
+│   │               ├── CartPageLocators.java
+│   │               ├── CheckoutInfoPageLocators.java
+│   │               ├── HomePageLocators.java
+│   │               ├── LoginPageLocators.java
+│   │               ├── MenuPageLocators.java
+│   │               ├── ProductDetailsPageLocators.java
 │   │       └── runner/
 │   │           ├── CucumberRunnerTest.java
 │   │       └── stepdefinitions/
-│   │           ├── Hooks.java
-│   │           ├── loginSteps.java
+│   │           └── dummyapi/
+│   │               ├── CreateUserSteps.java
+│   │               ├── DeleteUserSteps.java
+│   │               ├── GetUserByIdSteps.java
+│   │               ├── UpdateUserSteps.java
+│   │           └── swaglabs/
+│   │               ├── Hooks.java
 │   │       └── utils/
 │   │           ├── HelperClass.java
-│   │   └── resources/
-│   │       └── LoginPage.feature
+│   └── resources/
+│       └── dummyapi/
+│           ├── CreateUser.feature
+│           ├── DeleteUser.feature
+│           ├── GetUserById.feature
+│           ├── UpdateUser.feature
+│       └── swaglabs/
+│           ├── CartPage.feature
+│           ├── CheckoutPage.feature
+│           ├── LoginPage.feature
+│           ├── MenuPage.feature
+│           ├── ProductDetailsPage.feature
 ├── target/
-│   └── generated-test-sources/
-│   └── HtmlReports/
-│   │   └── report.html
-│   └── JSonReports/
-│   │   └── report.json
-│   └── JUnitReports/
-│   │   └── report.xml
-│   └── maven-status
-│   └── surefire-reports
-│   └── test-classes
 ├── .gitignore
 ├── pom.xml
 └── README.md
 ```
 
-### :file_folder: Menambahkan Test Script
+### Adding Test Script
 
-1. **Buat File Cucumber**
-   - Buat file fitur Cucumber pada direktori `src\test\resources`.
-   - Contoh: `LoginPage.feature`.
+1. **Create Cucumber Feature File**
+   - Create a feature file in the directory `src/test/resources`.
+   - Example: `LoginPage.feature`.
 
-2. **Buat Class Locator**
-   - Buat class locator dari elemen pada halaman yang akan diuji dan simpan di direktori `src\test\java\locators`.
-   - Contoh:
+2. **Create Locator Class**
+   - Create a locator class for the elements on the page to be tested and save it in the directory `src/test/java/locators`.
+   - Example:
      ```java
      package locators;
 
@@ -171,30 +135,38 @@ Berikut adalah langkah-langkah detail untuk menginstal dan menjalankan proyek in
          @FindBy(id = "user-name")
          public WebElement usernameField;
 
+         public LoginPageLocators() {
+             PageFactory.initElements(HelperClass.getDriver(), this);
+         }
      }
      ```
 
-3. **Buat Class Actions**
-   - Buat class actions yang menggunakan locator pada file locator yang telah dibuat sebelumnya dan simpan di direktori `src\test\java\actions`.
-   - Pada file ini, jangan lupa untuk menginisiasi driver dengan menambahkan kode berikut:
+3. **Create Actions Class**
+   - Create an actions class that uses the locator class created earlier and save it in the directory `src/test/java/actions`.
+   - In this file, don't forget to initialize the driver by adding the following code:
      ```java
-        nama_kelas_locators nama_variabel = null;
+     public class LoginPageActions {
+         LoginPageLocators loginPageLocators = null;
 
-            public nama_kelas_actions() {
-                this.nama_variabel = new nama_kelas_locators();
-                PageFactory.initElements(HelperClass.getDriver(), nama_variabel);
-            }
+         public LoginPageActions() {
+             this.loginPageLocators = new LoginPageLocators();
+             PageFactory.initElements(HelperClass.getDriver(), loginPageLocators);
+         }
+
+         public void enterUsername(String username) {
+             loginPageLocators.usernameField.sendKeys(username);
+         }
+     }
      ```
 
-4. **Buat Step Definitions**
-   - Buat step definitions berdasarkan file Gherkin yang telah dibuat dan simpan di direktori `src\test\java\stepdefinitions`.
-   - Contoh:
+4. **Create Step Definitions**
+   - Create step definitions based on the Gherkin file created and save it in the directory `src/test/java/stepdefinitions`.
+   - Example:
      ```java
      package stepdefinitions;
 
      import actions.LoginPageActions;
      import io.cucumber.java.en.When;
-     import io.cucumber.java.en.Then;
 
      public class LoginSteps {
          LoginPageActions loginPageActions = new LoginPageActions();
@@ -203,25 +175,25 @@ Berikut adalah langkah-langkah detail untuk menginstal dan menjalankan proyek in
          public void user_enters_username(String username) {
              loginPageActions.enterUsername(username);
          }
-
      }
      ```
 
-Dengan mengikuti langkah-langkah di atas, script pengujian dapat ditambahkan
+By following the above steps, test scripts can be added to the project.
 
 ## How to Run / Test Runner
 
-1. Buka terminal atau command prompt dan arahkan ke direktori proyek.
+1. Open terminal or command prompt and navigate to the project directory.
 
 ```
 cd b11-web-automation-testing
 ```
 
-2. Untuk menginstal proyek, jalankan perintah `mvn install`.
-3. Jalankan perintah `mvn test` untuk menjalankan pengujian.
-4. Setelah pengujian selesai, laporan pengujian akan di-generate. Untuk mengakses laporan pengujian dalam format HTML, buka file berikut menggunakan browser web (Jika menggunakan VSCode bisa memanfaatkan fitur "Open with Live Server"): `target/HtmlReports/report.html`
+2. To install the project, run the command `mvn install`.
+3. Run the command `mvn test` to execute the tests.
+4. After the tests are completed, the test reports will be generated. To access the test reports in HTML format, open the following file using a web browser (If using VSCode, you can use the "Open with Live Server" feature): `target/HtmlReports/report.html`
 
-## 👩‍💻 Author
+## Authors
+
 - Aini Diah Rahmawati [211524033]
 - Ghessa Theniana - [211524042]
 - Mochamad Ferdy Fauzan - [211524049]
