@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="89faa677-9f50-4664-9a1e-557870d244ec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runner/CucumberRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/CucumberRunnerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/actions/swaglabs/HomePageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/actions/swaglabs/HomePageActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/locators/swaglabs/HomePageLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/locators/swaglabs/HomePageLocators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/dummyapi/CreateUserSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/dummyapi/CreateUserSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/swaglabs/SwagLabsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/swaglabs/SwagLabsSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/swaglabs/CheckoutPage.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/swaglabs/CheckoutPage.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/dummyapi/CreateUser.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/dummyapi/CreateUser.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,16 +57,16 @@
     "settings.editor.selected.configurable": "preferences.editor"
   }
 }]]></component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Complete and Then Cancel Checkout with Valid Info">
-    <configuration name="Scenario: Cancel Checkout without Any Information" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Scenario: &quot;Add to Cart&quot; button is pressed, item added to cart page">
+    <configuration name="Scenario: Add items" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/swaglabs/CheckoutPage.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/swaglabs/EndToEndTesting.feature" />
       <option name="GLUE" value="stepdefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="b11-web-and-api-automation-testing" />
-      <option name="NAME_FILTER" value="^Cancel Checkout without Any Information$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Cancel Checkout without Any Information$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Cancel Checkout without Any Information" />
+      <option name="NAME_FILTER" value="^Add items$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Add items$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Add items" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -76,15 +78,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Checkout with One Item (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Create user with a header app-id that is not registered in the system" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/swaglabs/CartPage.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/dummyapi/CreateUser.feature" />
       <option name="GLUE" value="stepdefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="b11-web-and-api-automation-testing" />
-      <option name="NAME_FILTER" value="^Checkout with One Item$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Checkout with One Item$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Checkout with One Item" />
+      <option name="NAME_FILTER" value="^Create user with a header app\-id that is not registered in the system$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Create user with a header app\-id that is not registered in the system$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Create user with a header app-id that is not registered in the system" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -96,15 +98,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Complete Checkout with Valid Information" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Create user with valid data" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/swaglabs/CheckoutPage.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/dummyapi/CreateUser.feature" />
       <option name="GLUE" value="stepdefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="b11-web-and-api-automation-testing" />
-      <option name="NAME_FILTER" value="^Complete Checkout with Valid Information$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Complete Checkout with Valid Information$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Complete Checkout with Valid Information" />
+      <option name="NAME_FILTER" value="^Create user with valid data$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Create user with valid data$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Create user with valid data" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -116,15 +118,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Complete and Then Cancel Checkout with Valid Info" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Display product catalog on dashboard" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/swaglabs/CheckoutPage.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/swaglabs/DashboardPage.feature" />
       <option name="GLUE" value="stepdefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="b11-web-and-api-automation-testing" />
-      <option name="NAME_FILTER" value="^Complete and Then Cancel Checkout with Valid Info$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Complete and Then Cancel Checkout with Valid Info$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Complete and Then Cancel Checkout with Valid Info" />
+      <option name="NAME_FILTER" value="^Display product catalog on dashboard$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Display product catalog on dashboard$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Display product catalog on dashboard" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -136,15 +138,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verification checkout information page when there is item in the cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: &quot;Add to Cart&quot; button is pressed, item added to cart page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/swaglabs/CheckoutPage.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/swaglabs/DashboardPage.feature" />
       <option name="GLUE" value="stepdefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="b11-web-and-api-automation-testing" />
-      <option name="NAME_FILTER" value="^Verification checkout information page when there is item in the cart$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verification checkout information page when there is item in the cart$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verification checkout information page when there is item in the cart" />
+      <option name="NAME_FILTER" value="^\&quot;Add to Cart\&quot; button is pressed\, item added to cart page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^\&quot;Add to Cart\&quot; button is pressed\, item added to cart page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: &quot;Add to Cart&quot; button is pressed, item added to cart page" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -158,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Complete and Then Cancel Checkout with Valid Info" />
-        <item itemvalue="Cucumber Java.Scenario: Cancel Checkout without Any Information" />
-        <item itemvalue="Cucumber Java.Scenario: Complete Checkout with Valid Information" />
-        <item itemvalue="Cucumber Java.Scenario: Verification checkout information page when there is item in the cart" />
-        <item itemvalue="Cucumber Java.Scenario: Checkout with One Item (1)" />
+        <item itemvalue="Cucumber Java.Scenario: &quot;Add to Cart&quot; button is pressed, item added to cart page" />
+        <item itemvalue="Cucumber Java.Scenario: Display product catalog on dashboard" />
+        <item itemvalue="Cucumber Java.Scenario: Create user with valid data" />
+        <item itemvalue="Cucumber Java.Scenario: Create user with a header app-id that is not registered in the system" />
+        <item itemvalue="Cucumber Java.Scenario: Add items" />
       </list>
     </recent_temporary>
   </component>
