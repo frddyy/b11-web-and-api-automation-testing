@@ -30,6 +30,5 @@ Feature: Checkout functionality in Swag Labs
   Scenario: Complete and Then Cancel Checkout with Valid Info
     When User clicks the Checkout Button
     And User enters field with valid data
-    And User clicks on Continue button
     And User clicks on Cancel button
     Then User is navigated back to the Cart page
