@@ -1,8 +1,9 @@
-package actions;
+package actions.swaglabs;
 
-import locators.CartPageLocators;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+
+import locators.swaglabs.CartPageLocators;
 import utils.HelperClass;
 
 public class CartPageActions {

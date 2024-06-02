@@ -1,9 +1,9 @@
-package actions;
+package actions.swaglabs;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-import locators.LoginPageLocators;
+import locators.swaglabs.LoginPageLocators;
 import utils.HelperClass;
 
 public class LoginPageActions {
