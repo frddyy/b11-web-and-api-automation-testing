@@ -13,7 +13,23 @@ Feature: Checkout functionality in Swag Labs
   Scenario: Complete Checkout with Valid Information
     When User clicks the Checkout Button
     And User enters field with valid data
-#    Then User has navigated to checkout overview page
-#    And There are card data item with their quantity
-#    And There are information payment, shipping and price
-#    And There is cancel and finish button
+    And User clicks on Continue button
+    Then User navigates to Checkout Overview page
+    And User clicks on Finish button
+    Then User navigates to Checkout Complete page
+    And User clicks on Back Home button
+    Then User is navigated to the Dashboard
+
+  @CancelCheckoutWithoutAnyInformation @TC09
+  Scenario: Cancel Checkout without Any Information
+    When User clicks the Checkout Button
+    And User clicks on Cancel button
+    Then User is navigated back to the Cart page
+
+  @CompleteThenCancelCheckoutWithValidInfo @TC17
+  Scenario: Complete and Then Cancel Checkout with Valid Info
+    When User clicks the Checkout Button
+    And User enters field with valid data
+    And User clicks on Continue button
+    And User clicks on Cancel button
+    Then User is navigated back to the Cart page

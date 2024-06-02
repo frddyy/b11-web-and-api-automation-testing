@@ -19,6 +19,8 @@ public class SwagLabsSteps {
 	MenuPageActions objMenuPageActions = new MenuPageActions();
 
 	CheckoutInfoPageActions objCheckoutInfoPage = new CheckoutInfoPageActions();
+	CheckoutOverviewPageActions objCheckoutOverviewPage = new CheckoutOverviewPageActions();
+	CheckoutCompletePageActions objCheckoutCompletePage = new CheckoutCompletePageActions();
 
 	String url = "https://www.saucedemo.com/";
 	String catalogDescription, detailsName, detailsDescription, detailsPrice;
@@ -140,7 +142,8 @@ public class SwagLabsSteps {
 
 	@Then("User navigate to Checkout Information page")
 	public void user_navigate_to_checkout_information_page() throws InterruptedException {
-		Assert.assertTrue(objCartPage.getCheckoutPage().isDisplayed());
+		Assert.assertTrue(objCheckoutInfoPage.getCheckoutInfoPage());
+		Thread.sleep(2000);  // Menambahkan waktu tunggu 2 detik
 	}
 
 	//Fitur Product Details
@@ -300,9 +303,57 @@ public class SwagLabsSteps {
 		Thread.sleep(2000);
 	}
 
+	// Fitur Checkout
+	// TC01
+
+	@When("User clicks on Continue button")
+	public void user_clicks_on_continue_button() {
+		objCheckoutInfoPage.clickOnContinueButton();
+	}
+
+	@When("User navigates to Checkout Overview page")
+	public void user_navigates_to_checkout_overview_page() {
+		Assert.assertTrue(objCheckoutOverviewPage.isCheckoutOverviewPageDisplayed());
+	}
+
+	@When("User clicks on Finish button")
+	public void user_clicks_on_finish_button() {
+		objCheckoutOverviewPage.clickOnFinishButton();
+	}
+
+	@Then("User navigates to Checkout Complete page")
+	public void user_navigates_to_checkout_complete_page() {
+		Assert.assertTrue(objCheckoutCompletePage.isCheckoutCompletePageDisplayed());
+	}
+
+	@When("User clicks on Back Home button")
+	public void user_clicks_on_back_home_button() {
+		objCheckoutCompletePage.clickOnBackHomeButton();
+	}
+
+
+	// TC09
+	@When("User clicks on Cancel button")
+	public void user_clicks_on_cancel_button() {
+		objCheckoutOverviewPage.clickOnCancelButton();
+	}
+
+	@Then("User is navigated back to the Cart page")
+	public void user_is_navigated_back_to_the_cart_page() throws InterruptedException {
+		Assert.assertTrue(objCartPage.getCartPage().isDisplayed());
+		Thread.sleep(2000);
+	}
+
+	// TC17
+	@Then("User is navigated to the Dashboard")
+	public void user_is_navigated_to_the_dashboard() throws InterruptedException {
+		Assert.assertTrue(objHomePage.getDashboard().isDisplayed());
+		Thread.sleep(2000);
+	}
+
 	// End to End Testing
 	@Given("User Successfully Login")
-	public void user__on_swag_lab_login_page() {
+	public void user_on_swag_lab_login_page() {
 		user_is_on_swag_lab_login_page();
 		user_enters_username_as_and_password_as("standard_user", "secret_sauce");
 		user_should_be_able_to_login_successfully_and_new_page_open();
