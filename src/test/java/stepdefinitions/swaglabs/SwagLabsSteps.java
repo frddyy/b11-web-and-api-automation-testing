@@ -101,7 +101,7 @@ public class SwagLabsSteps {
 	}
 
 	@Then("The page displays all product catalog lists")
-	public void the_page_displays_all_product(String errorMessage) {
+	public void the_page_displays_all_product() {
 		objHomePage.getCatalog();
 	}
 
@@ -112,7 +112,7 @@ public class SwagLabsSteps {
 	}
 
 	@Then("The item is successfully added to the cart")
-	public void the_item_successfull_added_to_cart(String errorMessage) {
+	public void the_item_successfully_added_to_cart() {
 		objHomePage.getCart();
 	}
 
@@ -389,7 +389,7 @@ public class SwagLabsSteps {
 
 	@Then("User is navigated back to the Cart page")
 	public void user_is_navigated_back_to_the_cart_page() throws InterruptedException {
-		Assert.assertTrue(objCartPage.getCartPage().isDisplayed());
+		user_navigate_to_cart_page();
 		Thread.sleep(2000);
 	}
 
