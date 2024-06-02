@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(tags = "", 
-                 features = "src/test/resources/dummyapi/UpdateUser.feature", 
+                 features = "src/test/resources/dummyapi/CreateUser.feature", 
                  glue = {"stepdefinitions"},
                  monochrome = true,
                  plugin = {"html:target/HtmlReports/report.html",
