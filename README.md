@@ -34,8 +34,6 @@ This project performs functional testing of various features on the SauceDemo Sw
 
 ### Step-by-Step Installation Guide
 
-#### For Windows:
-
 1. **Clone Repository**
    - Open Command Prompt and navigate to the directory where you want to clone the repository.
    - Run the following command:
@@ -72,7 +70,9 @@ This project performs functional testing of various features on the SauceDemo Sw
 │   │       └── actions/
 │   │           └── swaglabs/
 │   │               ├── CartPageActions.java
+│   │               ├── CheckoutCompletePageActions.java
 │   │               ├── CheckoutInfoPageActions.java
+│   │               ├── CheckoutOverviewPageActions.java
 │   │               ├── HomePageActions.java
 │   │               ├── LoginPageActions.java
 │   │               ├── MenuPageActions.java
@@ -80,7 +80,9 @@ This project performs functional testing of various features on the SauceDemo Sw
 │   │       └── locators/
 │   │           └── swaglabs/
 │   │               ├── CartPageLocators.java
+│   │               ├── CheckoutCompletePageLocators.java
 │   │               ├── CheckoutInfoPageLocators.java
+│   │               ├── CheckoutOverviewPageLocators.java
 │   │               ├── HomePageLocators.java
 │   │               ├── LoginPageLocators.java
 │   │               ├── MenuPageLocators.java
@@ -106,6 +108,8 @@ This project performs functional testing of various features on the SauceDemo Sw
 │       └── swaglabs/
 │           ├── CartPage.feature
 │           ├── CheckoutPage.feature
+│           ├── DashboardPage.feature
+│           ├── EndToEnd.feature
 │           ├── LoginPage.feature
 │           ├── MenuPage.feature
 │           ├── ProductDetailsPage.feature
@@ -185,7 +189,7 @@ By following the above steps, test scripts can be added to the project.
 1. Open terminal or command prompt and navigate to the project directory.
 
 ```
-cd b11-web-automation-testing
+cd b11-web-and-api-automation-testing
 ```
 
 2. To install the project, run the command `mvn install`.
@@ -194,6 +198,6 @@ cd b11-web-automation-testing
 
 ## Authors
 
-- Aini Diah Rahmawati [211524033]
+- Aini Diah Rahmawati - [211524033]
 - Ghessa Theniana - [211524042]
 - Mochamad Ferdy Fauzan - [211524049]
